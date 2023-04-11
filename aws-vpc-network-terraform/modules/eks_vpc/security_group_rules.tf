@@ -1,4 +1,4 @@
-resource "aws_security_group_rule" "ing_ssh_rule" {
+resource "aws_security_group_rule" "ssh_rule" {
   type              = "ingress"
   from_port         = 22
   to_port           = 22
@@ -7,7 +7,7 @@ resource "aws_security_group_rule" "ing_ssh_rule" {
   security_group_id = aws_security_group.default_group.id
 }
 
-resource "aws_security_group_rule" "ing_http_rule" {
+resource "aws_security_group_rule" "http_rule" {
   type              = "ingress"
   from_port         = 80
   to_port           = 80
